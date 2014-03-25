@@ -1,0 +1,99 @@
+<html>
+<head>
+    <style>
+        .car-animation
+        {
+            animation:carRace 8s infinite;
+            -webkit-animation:carRace 8s infinite; /*Safari and Chrome*/
+        }
+
+        @keyframes carRace
+        {
+            from {left:0px;}
+            to {left:1000px;}
+        }
+
+        @-webkit-keyframes carRace /*Safari and Chrome*/
+        {
+            from {left:0px;}
+            to {left:1000px;}
+        }
+
+        .plane-animation
+        {
+            animation:planeRace 4s infinite;
+            -webkit-animation:planeRace 4s infinite; /*Safari and Chrome*/
+        }
+
+        @keyframes planeRace
+        {
+            from {left:0px;}
+            to {left:1000px;}
+        }
+
+        @-webkit-keyframes planeRace /*Safari and Chrome*/
+        {
+            from {left:0px;}
+            to {left:1000px;}
+        }
+        
+        .boat-animation
+        {
+            animation:boatRace 16s infinite;
+            -webkit-animation:planeRace 16s infinite; /*Safari and Chrome*/
+        }
+
+        @keyframes boatRace
+        {
+            from {left:0px;}
+            to {left:1000px;}
+        }
+
+        @-webkit-keyframes boatRace /*Safari and Chrome*/
+        {
+            from {left:0px;}
+            to {left:1000px;}
+        }
+    </style>
+</head>
+<body style="background-color: black;">
+<pre id="car" class="car-animation" style="color:blue; position: absolute;">
+    ___
+ __|   \__
+[--0----0-]</pre>
+
+<pre id="plane" class="plane-animation" style="color: yellow; position: absolute;top: 50px;">
+      \\
+_ _    \ \
+\| \____\__\___
+ |             \
+ |/ /____/  /__/
+ //     /  /
+       / /
+      //</pre>
+
+<pre id="boat" class="boat-animation" style="color: green; position: absolute;top: 150px;">
+ ___________
+<___________\ \
+\\_________ / /|
+ <____________/</pre>
+<script>
+	alert('hi Beary!');
+    alert('hi Landon!');
+	var car = document.getElementById('car'),
+		plane = document.getElementById('plane'),
+        boat = document.getElementById('boat');
+
+    car.onclick = function() {
+        this.style.top = (Math.random() * 500) + 'px';
+        return false;
+    };
+
+
+    plane.onclick = function() {
+        this.style.top = (Math.random() * 500) + 'px';
+        return false;
+    };
+</script>
+</body>
+</html>
